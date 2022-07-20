@@ -1,8 +1,10 @@
-export default function links({ link }) {
+import React from "react";
+
+export default function links({ link, acesso1, texto }) {
     return (
 
         <>
-            {link ? <> '<a href='#' >link1</a>'</> : <> '<a href='#'>link2</a>'</>}
+            {link && <a href={acesso1} >{texto}</a>}
         </>
     )
 }
