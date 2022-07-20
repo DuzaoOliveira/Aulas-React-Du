@@ -22,7 +22,7 @@ function App() {
       <Redes texto={'Segundo card'} />
       <Redes texto={'Esse é meu card 3'} />
       <Redes texto={'Card 4'} />
-      <Links link={link}/>
+      <Links link={link} />
 
     </div>
   );
