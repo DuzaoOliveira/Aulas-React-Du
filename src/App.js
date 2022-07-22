@@ -62,7 +62,7 @@ function App() {
               <div>Idade:{item.Idade}</div>
               <div>Nasc:{item.data_de_nascimento}</div>
               <div>Nome da Mãe:{item.nome_da_mae}</div>
-              <div>{item.nome_do_pai && <>Nome do Pai</>}</div>
+              <div>{item.nome_do_pai && <> Nome do Pai:</>} {item.nome_do_pai} </div>
               <div>Telefone para contato:{item.Numero_de_Telefone}</div>
 
             </div>
