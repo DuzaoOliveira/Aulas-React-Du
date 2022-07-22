@@ -1,35 +1,76 @@
 import './App.css';
-import Header from './components/Header';
-import Secao1 from './components/Secao1';
-import Secao2 from './components/Secao2';
-import Footer from './components/Footer';
-import Redes from './components/Redes';
-import Links from './components/Links';
 
 function App() {
 
-  const mostrar = true
-  const link1 = true
-  const link2 = true
+  const lista = [
+    {
+      Nome: 'Eduardo',
+      Idade: '34',
+      data_de_nascimento: '18/01/1988',
+      nome_da_mae: 'Monica',
+      nome_do_pai: '',
+      Numero_de_Telefone: '(11) 992545142',
+    },
+
+    {
+      Nome: 'Ricardo',
+      Idade: 'Idade: 22',
+      data_de_nascimento: '15/05/2000',
+      nome_da_mae: 'Maria',
+      nome_do_pai: 'Pedro',
+      Numero_de_Telefone: '(11) 992545142',
+    },
+
+    {
+      Nome: 'Julia',
+      Idade: '8',
+      data_de_nascimento: '15/05/2014',
+      nome_da_mae: 'Patricia',
+      nome_do_pai: 'Eduardo',
+      Numero_de_Telefone: '(11) 992545142',
+    },
+
+    {
+      Nome: 'Alex',
+      Idade: '30',
+      data_de_nascimento: '20/02/1992',
+      nome_da_mae: 'Paula',
+      nome_do_pai: '',
+      Numero_de_Telefone: '(11) 992545142',
+    },
+
+    {
+      Nome: 'Patricia',
+      Idade: '36',
+      data_de_nascimento: '27/09/1985',
+      nome_da_mae: 'Odete',
+      nome_do_pai: 'Aparecido',
+      Numero_de_Telefone: '(11) 992545142',
+    },
+
+
+  ]
 
   return (
-    <div className="App">
+    <div className='App'>
+      {
+        lista.map(item => {
 
-      <Header />
-      <Secao1 mostrar={mostrar} />
-      <Secao2 />
-      <Footer />
-      <Redes texto={'Meu primeiro card'} />
-      <Redes texto={'Segundo card'} />
-      <Redes texto={'Esse é meu card 3'} />
-      <Redes texto={'Card 4'} />
-      <Links texto={'Youtube'} link={link1} acesso1='https://www.youtube.com/watch?v=ve8ecFZKDL4' />
-      <Links texto={'lance'} link={link2} acesso1='https://www.lance.com.br/' />
+          return (
+            <div className='box'>
+              <div>Nome:{item.Nome}</div>
+              <div>Idade:{item.Idade}</div>
+              <div>Nasc:{item.data_de_nascimento}</div>
+              <div>Nome da Mãe:{item.nome_da_mae}</div>
+              <div>{item.nome_do_pai && <>Nome do Pai</>}</div>
+              <div>Telefone para contato:{item.Numero_de_Telefone}</div>
 
-
-
+            </div>
+          )
+        })
+      }
     </div>
-  );
+  )
 }
 
 export default App;
