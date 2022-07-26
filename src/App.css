@@ -1,9 +1,10 @@
-.box{
+.box1{
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
 }
 
-.box div{
-    margin: 0 15px;
+.box1 p{
+    margin: 0 30px;
+    padding: 0 10px;
 }

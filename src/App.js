@@ -4,73 +4,89 @@ function App() {
 
   const lista = [
     {
-      Nome: 'Eduardo',
-      Idade: '34',
-      data_de_nascimento: '18/01/1988',
-      nome_da_mae: 'Monica',
-      nome_do_pai: '',
-      Numero_de_Telefone: '(11) 992545142',
+      mercado: 'Assai',
+      produto: 'Carne',
+      data_de_vencimento: '25/10/22',
+      itens: false
+    },
+    {
+      mercado: 'Carrefour',
+      produto: 'Refrigerante',
+      data_de_vencimento: '15/03/23',
+      itens: true
     },
 
     {
-      Nome: 'Ricardo',
-      Idade: 'Idade: 22',
-      data_de_nascimento: '15/05/2000',
-      nome_da_mae: 'Maria',
-      nome_do_pai: 'Pedro',
-      Numero_de_Telefone: '(11) 992545142',
+      mercado: 'Atacadão',
+      produto: 'Salgadinho',
+      data_de_vencimento: '02/05/23',
+      itens: false
     },
-
     {
-      Nome: 'Julia',
-      Idade: '8',
-      data_de_nascimento: '15/05/2014',
-      nome_da_mae: 'Patricia',
-      nome_do_pai: 'Eduardo',
-      Numero_de_Telefone: '(11) 992545142',
+      mercado: 'Coop',
+      produto: 'Açucar',
+      data_de_vencimento: '03/09/22',
+      itens: true
     },
-
-    {
-      Nome: 'Alex',
-      Idade: '30',
-      data_de_nascimento: '20/02/1992',
-      nome_da_mae: 'Paula',
-      nome_do_pai: '',
-      Numero_de_Telefone: '(11) 992545142',
-    },
-
-    {
-      Nome: 'Patricia',
-      Idade: '36',
-      data_de_nascimento: '27/09/1985',
-      nome_da_mae: 'Odete',
-      nome_do_pai: 'Aparecido',
-      Numero_de_Telefone: '(11) 992545142',
-    },
-
-
   ]
+
+  const lista2 = [
+    {
+      fruta: 'Abacaxi',
+      legumes: 'Cenoura',
+      verduras: 'Alface',
+    },
+
+    {
+      fruta: 'Maçã',
+      legumes: 'Batata',
+      verduras: 'Couve',
+    },
+
+    {
+      fruta: 'Abacaxi',
+      legumes: 'Mandioca',
+      verduras: 'Couve-flor',
+    },
+  ]
+
+  const filtrando = lista.filter(itemLista => {
+    return itemLista.itens === false
+  })
+
+  const filtro = lista2.filter(listaItem => {
+    return listaItem.fruta === 'Abacaxi'
+  })
 
   return (
     <div className='App'>
       {
-        lista.map(item => {
-
+        filtrando.map(itemLista => {
           return (
-            <div className='box'>
-              <div>Nome:{item.Nome}</div>
-              <div>Idade:{item.Idade}</div>
-              <div>Nasc:{item.data_de_nascimento}</div>
-              <div>Nome da Mãe:{item.nome_da_mae}</div>
-              <div>{item.nome_do_pai && <> Nome do Pai:</>} {item.nome_do_pai} </div>
-              <div>Telefone para contato:{item.Numero_de_Telefone}</div>
-
+            <div className='box1'>
+              <p>{itemLista.produto}</p>
+              <p>{itemLista.mercado}</p>
+              <p>{itemLista.data_de_vencimento}</p>
             </div>
           )
         })
       }
+      <div>
+        {
+          filtro.map(listaItem => {
+            return (
+              <div className='box1'>
+                <p>{listaItem.fruta}</p>
+                <p>{listaItem.legumes}</p>
+                <p>{listaItem.verduras}</p>
+              </div>
+            )
+          })
+        }
+      </div>
+
     </div>
-  )
+  );
 }
 
 export default App;
