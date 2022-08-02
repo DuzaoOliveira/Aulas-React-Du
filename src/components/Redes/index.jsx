@@ -1,8 +1,7 @@
-export default function Redes({ texto }) {
-  return (
+export default function Redes({texto}){
+  return(
     <p>{texto}</p>
   )
 }
-
 
 

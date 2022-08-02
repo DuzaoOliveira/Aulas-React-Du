@@ -1,21 +1,39 @@
-import React, { useState } from "react";
-
+import './App.css';
+import Header from './components/Header';
+import Secao1 from './components/Secao1';
+import Secao2 from './components/Secao2';
+import Footer from './components/Footer';
+import Redes from './components/Redes';
+import Links from './components/Links';
 function App() {
-    const [teste, setTeste] = useState('Eu amo anime')
-    const [teste2, setTeste2] = useState(1)
+  const mostrar = true
+  const link = true
+  const link2 = false
 
-
-
-    return (
-        <>
-            {teste}
-            {teste2}
-            <button onClick={() => setTeste('Eu odeio futebol')}>Gosto de?</button>
-            <button onClick={() => setTeste2(teste2 * 4)}>Calculo</button>
-        </>
-    )
+  return (
+    <div className="App">
+      <Header />
+      <Secao1 mostrar={mostrar} />
+      <Secao2 />
+      <Footer />
+      <div className= 'box1'>
+      <Redes texto={'Primeiro card'} />
+      </div>
+      <div className='box2'>
+      <Redes texto={'Segundo card'} />
+      </div>
+      <div className='box3'>
+      <Redes texto={'Terceiro card'} />
+      </div>
+      <div className='box4'>
+      <Redes texto={'Quarto card'} />
+      </div>
+      <Links link={link}/>
+      <Links link={link2}/>
+      
+    </div>
+  );
 }
-
 export default App;
 
 

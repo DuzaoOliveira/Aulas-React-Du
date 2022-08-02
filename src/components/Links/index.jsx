@@ -1,10 +1,10 @@
-import React from "react";
-
-export default function links({ link, acesso1, texto }) {
+export default function links({ link, link2 }) {
     return (
 
+
         <>
-            {link && <a href={acesso1} >{texto}</a>}
+            {link && <> '<a href='#' >Primeiro link</a>'</>}
+            {link2 && <> '<a href='#' >Segundo link</a>'</>}
         </>
     )
 }
