@@ -1,11 +1,11 @@
 export const Input = (digitando) => {
-    if (digitando === '--Guitarra--') {
+    if (digitando === 'Guitarra') {
         console.log('tem cordas')
     }
-    else if (digitando === '--Bateria--') {
+    else if (digitando === 'Bateria') {
         console.log('tem pedal')
     }
-    else if (digitando === '--Microfone--') {
+    else if (digitando === 'Microfone') {
         console.log('tem fios')
     }
 
