@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 function App() {
-  
-    const [lista, setLista] = useState('Eduardo')
-    const [acionar, setAcionar] = useState(0)
+
+    const [acionar1, setAcionar1] = useState(0)
+    const [acionar2, setAcionar2] = useState(0)
+    const [acionar3, setAcionar3] = useState(0)
     const [convocado1, setConvocado1] = useState('1 Alisson')
     const [convocado2, setConvocado2] = useState('2 Danilo')
     const [convocado3, setConvocado3] = useState('3 Marquinhos')
@@ -16,9 +17,9 @@ function App() {
     const [convocado10, setConvocado10] = useState('11 Neymar')
     const [convocado11, setConvocado11] = useState('9 G Jesus')
 
-   
+
     useEffect(() => {
-        if (acionar > 0 ) {
+        if (acionar1 > 0) {
             setConvocado1('1 Cassio')
             setConvocado2('2 Fagner')
             setConvocado3('3 Bruno Mendez')
@@ -32,10 +33,10 @@ function App() {
             setConvocado11('9 Yuri Alberto')
         }
 
-    }, [acionar]);
+    }, [acionar1]);
 
     useEffect(() => {
-        if (acionar > 1) {
+        if (acionar2 > 1) {
             setConvocado1('1 Jandrei')
             setConvocado2('2 Rafinha')
             setConvocado3('3 Miranda')
@@ -49,10 +50,10 @@ function App() {
             setConvocado11('9 Calleri')
         }
 
-    }, [acionar]);
+    }, [acionar2]);
 
     useEffect(() => {
-        if (acionar > 2) {
+        if (acionar3 > 2) {
             setConvocado1('1 Weverton')
             setConvocado2('2 Piquerez')
             setConvocado3('3 Gustavo Gomez')
@@ -66,9 +67,50 @@ function App() {
             setConvocado11('9 Roni')
         }
 
-    }, [acionar]);
-   
+    }, [acionar3]);
 
+    const [acionador, setAcionador] = useState(0)
+    const [Nomes1, setNomes1] = useState('Eduardo')
+    const [Nomes2, setNomes2] = useState('Elias')
+    const [Nomes3, setNomes3] = useState('Edvaldo')
+    const [Nomes4, setNomes4] = useState('Luiz')
+    const [Nomes5, setNomes5] = useState('Kaique')
+    const [Nomes6, setNomes6] = useState('Silas')
+    const [Nomes7, setNomes7] = useState('Edgar')
+    const [Nomes8, setNomes8] = useState('Matheus')
+    const [Nomes9, setNomes9] = useState('Jhonatan')
+    const [Nomes10, setNomes10] = useState('Rafael')
+
+    useEffect(() => {
+        if (acionador > 0) {
+            setNomes1('Luzia')
+            setNomes2('Lucia')
+            setNomes3('Monica')
+            setNomes4('Vitoria')
+            setNomes5('Gabriela')
+            setNomes6('Priscila')
+            setNomes7('Lais')
+            setNomes8('Manuela')
+            setNomes9('Julia')
+            setNomes10('Helena')
+        }
+    }
+
+    )
+    useEffect(() => {
+        if (acionador > 1) {
+            setNomes1('Marcos')
+            setNomes2('Daniel')
+            setNomes3('Sandra')
+            setNomes4('Crislaine')
+            setNomes5('Mariara')
+            setNomes6('Miguel')
+            setNomes7('Patricia')
+            setNomes8('Edson')
+            setNomes9('Maria')
+            setNomes10('Wagner')
+        }
+    })
 
     return (
         <>
@@ -83,22 +125,26 @@ function App() {
             {convocado9}<br />
             {convocado10}<br />
             {convocado11}<br />
-            <button onClick={() => setAcionar(acionar + 1 )}>Time do Corinthians</button><br />
-            <button onClick={() => setAcionar(acionar + 1)}>Time do São Paulo</button><br />
-            <button onClick={() => setAcionar(acionar + 1)}>Time do Palmeiras</button><br />
+            <button onClick={() => setAcionar1(acionar1 + 1)}>Time do Corinthians</button><br />
+            <button onClick={() => setAcionar2(acionar2 + 2)}>Time do São Paulo</button><br />
+            <button onClick={() => setAcionar3(acionar3 + 3)}>Time do Palmeiras</button><br />
+
+            {Nomes1} <br />
+            {Nomes2} <br />
+            {Nomes3} <br />
+            {Nomes4} <br />
+            {Nomes5} <br />
+            {Nomes6} <br />
+            {Nomes7} <br />
+            {Nomes8} <br />
+            {Nomes9} <br />
+            {Nomes10} <br />
+            <button onClick={() => setAcionador(acionador + 1)}>Nomes</button><br />
         </>
     )
-    
+
 }
-
-
-
 
 export default App
 
 
-// fazer aparecer a lista da seleção brasileira, só que você tera três botões para trocar
-// os nomes da seleção brasileira, para os jogadores do corinthians, do são paulo e do palmeiras
-// 11 jogadores
-
-// fazer uma fução que mude na tela 10 nomes diferentes, ao clicar em um botão, mudar 2 vezes
