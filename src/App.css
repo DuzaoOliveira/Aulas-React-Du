@@ -1,10 +1,35 @@
-.box1{
-    display: flex;
-    margin-bottom: 10px;
-    flex-direction: column;
+.lojas {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
 }
 
-.box1 p{
-    margin: 0 30px;
-    padding: 0 10px;
+
+.box1{
+    text-align: center;
+    color: white;
+background: red;
+width: 300px;
+
+}
+
+.box2 {
+    text-align: center;
+  color: white;
+  background: blue;
+  width: 300px;
+}
+
+
+
+.oferta {
+  margin-top: -56px;
+  width: 200px;
+}
+
+.cards {
+  display: flex; 
+  flex-direction: column;
+  width: 200px;
+  height: 150px;
 }
