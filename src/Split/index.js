@@ -9,7 +9,8 @@ function Split() {
     const splitLoja3 = splitLoja.split('&')[1]
     const splitLoja4 = splitLoja.split('&')[2]
 
-    console.log(splitLoja3, 'splitLoja3')
+
+
     return (
         <>
             <div className="lojas" >
