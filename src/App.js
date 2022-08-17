@@ -5,19 +5,14 @@ import "./App.css"
 
 function App() {
 
-    const [resposta, setResposta, palmeiras] = useState()
+    const [resposta, setResposta] = useState()
 
 
-    // fetch('https://teste-aula-metodos-90a63-default-rtdb.firebaseio.com/clubes.json')
-    // .then(response => response.json())
-    // .then(data => console.log(data));
     useEffect(() => {
         axios.get('https://teste-aula-metodos-90a63-default-rtdb.firebaseio.com/futebol.json')
             .then(function (response) {
                 setResposta(response.data);
-                console.log(response.data)
             })
-
     }, [])
 
 
