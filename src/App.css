@@ -1,41 +1,39 @@
-.lojas {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-}
-
-
-.box1{
-    text-align: center;
-    color: white;
-background: red;
-width: 300px;
-
-}
-
-.box2 {
-    text-align: center;
-  color: white;
-  background: blue;
-  width: 300px;
-}
-
-
-
-.oferta {
-  margin-top: -56px;
-  width: 200px;
-}
-
-.cards {
-  display: flex; 
-  flex-direction: column;
-  width: 200px;
-  height: 150px;
-}
-
 .clubes {
   display: flex;
   flex-direction: column;
+margin: 10px;
+}
+
+
+form {
+  width: 20px;
+}
+
+.times {
+  width: 20px;
+}
+
+.botao {
+  width: 20px;
+}
+
+.jogador {
+  width: 20px;
+}
+
+.camisa {
+  width: 20px;
+}
+
+.altura {
+  width: 20px;
+}
+
+.idade {
+  width: 20px;
+}
+
+.nacionalidade {
+  width: 20px;
 }
 
